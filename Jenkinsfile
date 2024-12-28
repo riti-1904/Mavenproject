@@ -19,13 +19,19 @@ pipeline {
             }
             steps {
                 bat """
-                    mvn clean verify sonar:sonar -X ^
-                    -Dsonar.projectKey=MavenProject ^
-                    -Dsonar.projectName=MavenProject ^
-                    -Dsonar.sources=. ^
-                    -Dsonar.host.url=http://localhost:9000 ^
-                    -Dsonar.token=%SONAR_TOKEN% ^
-                    -Dsonar.verbose=true
+                    // mvn clean verify sonar:sonar -X ^
+                    // -Dsonar.projectKey=MavenProject ^
+                    // -Dsonar.projectName=MavenProject ^
+                    // -Dsonar.sources=. ^
+                    // -Dsonar.host.url=http://localhost:9000 ^
+                    // -Dsonar.token=%SONAR_TOKEN% ^
+                    // -Dsonar.verbose=true
+
+  mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=MavenProject \
+  -Dsonar.projectName='MavenProject' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_0a76e26717e3dd0e94c19155da4c1fb51bda7172
 
 
                 """
