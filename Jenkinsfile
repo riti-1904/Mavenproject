@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Siddhant40/javafile.git' // Replace with your repo URL
+                git branch: 'main', url: 'https://github.com/riti-1904/Mavenproject' // Replace with your repo URL
             }
         }
         stage('Build and Analyze') {
