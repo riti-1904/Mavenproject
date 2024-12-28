@@ -4,7 +4,7 @@ pipeline {
         maven 'Maven' // Name you configured in Jenkins
     }
     environment {
-        SONAR_TOKEN = credentails('SonarQube-Token-1')
+        //SONAR_TOKEN = credentails('SonarQube-Token-1')
         SONAR_SCANNER_PATH = 'C:\\Program Files\\sonar-scanner-cli-6.2.1.4610-windows-x64\\sonar-scanner-6.2.1.4610-windows-x64\\bin\\sonar-scanner.bat'// Add this line
     }
     stages {
