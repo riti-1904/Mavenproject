@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build and Analyze') {
              environment {
-                SONAR_TOKEN = credentials('SonarQube')
+                SONAR_TOKEN = credentials('SonarQube-Token-1')
             }
             steps {
                 bat """
